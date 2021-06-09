@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 
-import Loading from '@/src/components/loading'
-import NoResults from '@/src/components/noresults'
+import Loading from '@/src/components/libs/loading'
+import NoResults from '@/src/components/libs/noresults'
 
 const Loader = ({ source, loading, component, blank, template }) => {
 

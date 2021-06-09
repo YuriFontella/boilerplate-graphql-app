@@ -2,7 +2,7 @@ import { swr } from '@/src/hooks/api'
 
 import { GET_COUNTERS } from '@/src/graphql/queries'
 
-import ChartPie from '@/src/components/dashboard/chartpie'
+import ChartPie from '@/src/components/pages/dashboard/chartpie'
 
 import Loader from '@/src/libs/loader'
 

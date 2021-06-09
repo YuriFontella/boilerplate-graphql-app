@@ -1,6 +1,6 @@
 import { useSession } from 'next-auth/client'
 
-import Unauthorized from '@/src/components/unauthorized'
+import Unauthorized from '@/src/components/layouts/unauthorized'
 
 import Private from '@/src/layouts/Private'
 

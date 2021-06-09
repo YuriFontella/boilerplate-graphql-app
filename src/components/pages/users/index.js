@@ -1,8 +1,8 @@
 
 import Loader from '@/src/libs/loader'
 
-import List from '@/src/components/users/list'
-import Section from '@/src/components/users/section'
+import List from '@/src/components/pages/users/list'
+import Section from '@/src/components/pages/users/section'
 
 const Index = ({ data }) => {
 

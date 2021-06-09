@@ -6,7 +6,7 @@ import { GET_USERS } from '@/src/graphql/queries'
 
 import { getSession } from 'next-auth/client'
 
-import Index from '@/src/components/users/index'
+import Index from '@/src/components/pages/users/index'
 
 const Users = ({ data }) => {
 

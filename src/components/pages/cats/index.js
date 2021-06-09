@@ -4,8 +4,8 @@ import { GET_CATS } from '@/src/graphql/queries'
 
 import Loader from '@/src/libs/loader'
 
-import List from '@/src/components/cats/list'
-import Section from '@/src/components/cats/section'
+import List from '@/src/components/pages/cats/list'
+import Section from '@/src/components/pages/cats/section'
 
 const Cats = () => {
 

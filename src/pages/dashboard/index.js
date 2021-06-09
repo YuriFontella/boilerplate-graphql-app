@@ -2,8 +2,8 @@ import Auth from '@/src/layouts/Auth'
 
 import Can from '@/src/libs/can'
 
-import Index from '@/src/components/dashboard'
-import Permission from '@/src/components/permission'
+import Index from '@/src/components/pages/dashboard'
+import Permission from '@/src/components/pages/permission'
 
 const Dashboard = () => {
 

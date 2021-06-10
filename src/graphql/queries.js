@@ -4,6 +4,9 @@ export const GET_CATS = `
       name
       image
       created_at
+      owner {
+        name
+      }
     }
   }
 `

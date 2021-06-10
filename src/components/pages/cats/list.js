@@ -21,7 +21,7 @@ const List = ({ item }) => {
             {item.name}
           </div>
           <div className="text-gray-600 dark:text-gray-200 text-sm">
-            Developer
+            {item.owner.name}
           </div>
         </div>
         <div className="flex-1 justify-end text-right text-gray-600 dark:text-gray-200 text-xs">

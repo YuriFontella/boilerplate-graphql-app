@@ -6,8 +6,6 @@ import { SubscriptionClient } from 'graphql-subscriptions-client'
 
 import { useEffect, useState } from 'react'
 
-
-
 const Websocket = () => {
 
   const query = SUB_NOTIFICATION

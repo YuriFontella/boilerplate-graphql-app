@@ -10,12 +10,13 @@ import { useQuery } from 'graphql-hooks'
 
 const Index = () => {
 
-  const { data } = useQuery(GET_USERS)
+  const { data, loading } = useQuery(GET_USERS)
 
   return (
     <Section>
       <Loader
         source={data?.users}
+        loading={loading}
         component={(item, index) => <List key={index} item={item} />}
         blank={false}
         template={() =>

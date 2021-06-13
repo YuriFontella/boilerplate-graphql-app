@@ -4,9 +4,7 @@ import Unauthorized from '@/src/components/layouts/unauthorized'
 
 import Private from '@/src/layouts/Private'
 
-import { GraphQLClient, ClientContext } from 'graphql-hooks'
-
-import memCache from 'graphql-hooks-memcache'
+import { graphQLClient } from '@/src/graphql/client'
 
 const Auth = ({ children }) => {
 
@@ -18,23 +16,9 @@ const Auth = ({ children }) => {
   else if (!session)
     return <Unauthorized />
 
-  const client = new GraphQLClient({
-    url: process.env.GRAPHQL,
-    cache: memCache(),
-    headers: {
-      'x-access-token': session.access_token
-    },
-    onError({ operation, result }) {
-      if (result)
-        console.log(result)
-    }
-  })
+  graphQLClient.setHeader('x-access-token', session.access_token)
 
-  return (
-    <ClientContext.Provider value={client}>
-      <Private>{children}</Private>
-    </ClientContext.Provider>
-  )
+  return <Private>{children}</Private>
 }
 
 export default Auth

@@ -10,7 +10,7 @@ const Error = () => {
   const { state } = useStore()
 
   const message = (state) => {
-    const [result] = state.error.response.errors.map(e => ({
+    const [result] = state.error.graphQLErrors.map(e => ({
       message: e.message
     }))
 
@@ -25,7 +25,7 @@ const Error = () => {
   }
 
   useEffect(() => {
-    if (state.error.response) {
+    if (state.error.graphQLErrors) {
       error(message(state))
     }
   }, [state])

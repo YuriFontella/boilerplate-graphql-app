@@ -12,7 +12,7 @@ import Router from 'next/router'
 
 import StoreProvider from '@/src/contexts/store'
 
-import Error from '@/src/libs/error'
+import { graphQLClient, ClientContext } from '@/src/graphql/client'
 
 NProgress.configure({ showSpinner: false })
 
@@ -34,10 +34,11 @@ const App = ({ Component, pageProps }) => {
           <title>Boilerplate</title>
         </Head>
 
-        <Layout>
-          <Component {...pageProps} />
-          <Error />
-        </Layout>
+        <ClientContext.Provider value={graphQLClient}>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ClientContext.Provider>
       </StoreProvider>
     </Provider>
   )

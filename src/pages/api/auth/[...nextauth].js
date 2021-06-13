@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
 
-import { request } from 'graphql-request'
+import { graphQLClient } from '@/src/graphql/client'
 
 const query = `
   mutation auth($email: String!, $password: String!) {
@@ -28,12 +28,14 @@ const options = {
       name: 'Credentials',
       authorize: async ({ email, password }) => {
 
+        const variables = { email, password }
+
         try {
 
-          const response = await request(process.env.GRAPHQL, query, { email, password })
+          const { data } = await graphQLClient.request({ query, variables })
 
-          if (response.auth.user)
-            return response.auth
+          if (data.auth.user)
+            return data.auth
 
         } catch (e) {
 

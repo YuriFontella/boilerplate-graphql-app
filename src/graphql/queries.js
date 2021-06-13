@@ -31,3 +31,11 @@ export const GET_COUNTERS = `
     }
   }
 `
+
+export const SUB_NOTIFICATION = `
+  subscription {
+    notification {
+      message
+    }
+  }
+`

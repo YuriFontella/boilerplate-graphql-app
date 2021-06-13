@@ -4,7 +4,13 @@ import Loader from '@/src/libs/loader'
 import List from '@/src/components/pages/users/list'
 import Section from '@/src/components/pages/users/section'
 
-const Index = ({ data }) => {
+import { GET_USERS } from '@/src/graphql/queries'
+
+import { useQuery } from 'graphql-hooks'
+
+const Index = () => {
+
+  const { data } = useQuery(GET_USERS)
 
   return (
     <Section>

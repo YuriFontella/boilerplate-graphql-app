@@ -1,5 +1,3 @@
-import { swr } from '@/src/hooks/api'
-
 import { GET_CATS } from '@/src/graphql/queries'
 
 import Loader from '@/src/libs/loader'
@@ -7,9 +5,11 @@ import Loader from '@/src/libs/loader'
 import List from '@/src/components/pages/cats/list'
 import Section from '@/src/components/pages/cats/section'
 
+import { useQuery } from 'graphql-hooks'
+
 const Cats = () => {
 
-  const { data, loading } = swr('cats', GET_CATS)
+  const { loading, data } = useQuery(GET_CATS)
 
   return (
     <Section>

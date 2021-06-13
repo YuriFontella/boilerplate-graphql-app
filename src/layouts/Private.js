@@ -8,7 +8,8 @@ const navigation = [
   { name: 'Dashboard', href: '/dashboard' },
   { name: 'Usuários', href: '/users' },
   { name: 'Gatos', href: '/cats' },
-  { name: 'Websocket', href: '/websocket' }
+  { name: 'Websocket', href: '/websocket' },
+  { name: 'About', href: '/about' }
 ]
 
 const Private = ({ children }) => {

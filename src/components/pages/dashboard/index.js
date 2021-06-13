@@ -1,4 +1,4 @@
-import { swr } from '@/src/hooks/api'
+import { useQuery } from 'graphql-hooks'
 
 import { GET_COUNTERS } from '@/src/graphql/queries'
 
@@ -8,7 +8,7 @@ import Loader from '@/src/libs/loader'
 
 const Index = () => {
 
-  const { data, loading } = swr('dashboard', GET_COUNTERS)
+  const { data, loading } = useQuery(GET_COUNTERS)
 
   return (
     <Loader

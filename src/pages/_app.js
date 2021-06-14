@@ -4,6 +4,8 @@ import { Fragment } from 'react'
 
 import { Provider } from 'next-auth/client'
 
+import { ToastContainer } from 'react-toast'
+
 import NProgress from 'nprogress'
 
 import Head from 'next/head'
@@ -16,7 +18,7 @@ import { graphQLClient, ClientContext } from '@/src/graphql/client'
 
 NProgress.configure({ showSpinner: false })
 
-Router.events.on('routeChangeStart', (url) => {
+Router.events.on('routeChangeStart', () => {
   NProgress.start()
 })
 
@@ -39,6 +41,8 @@ const App = ({ Component, pageProps }) => {
             <Component {...pageProps} />
           </Layout>
         </ClientContext.Provider>
+
+        <ToastContainer position="bottom-center" />
       </StoreProvider>
     </Provider>
   )

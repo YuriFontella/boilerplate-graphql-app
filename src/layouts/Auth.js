@@ -1,5 +1,3 @@
-import { Fragment } from 'react'
-
 import { useSession } from 'next-auth/client'
 
 import Unauthorized from '@/src/components/layouts/unauthorized'
@@ -20,15 +18,7 @@ const Auth = ({ children }) => {
 
   graphQLClient.setHeader('x-access-token', session.access_token)
 
-  graphQLClient.onError({
-    result: (result) => console.log(result)
-  })
-
-  return (
-    <Fragment>
-      <Private>{children}</Private>
-    </Fragment>
-  )
+  return <Private>{children}</Private>
 }
 
 export default Auth

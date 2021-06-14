@@ -18,8 +18,8 @@ const graphQLClient = new GraphQLClient({
   cache: memCache(),
   logErrors: process.env.NODE_ENV === 'development',
   subscriptionClient: websocket,
-  onError({ result }) {
-    return <Error result={result} />
+  onError: ({ result }) => {
+    Error(result)
   }
 })
 

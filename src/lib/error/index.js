@@ -1,7 +1,6 @@
-import { useEffect } from 'react'
-import { ToastContainer, toast } from 'react-toast'
+import { toast } from 'react-toast'
 
-const Error = ({ result }) => {
+export const Error = (result) => {
 
   const message = (result) => {
     const [message] = result.error.graphQLErrors.map(e => ({
@@ -17,14 +16,8 @@ const Error = ({ result }) => {
     })
   }
 
-  useEffect(() => {
-    if (result)
-      error(message(result))
-
-  }, [result])
-
-  return <ToastContainer position="bottom-center" />
-
+  if (result)
+    return error(message(result))
 }
 
 export default Error

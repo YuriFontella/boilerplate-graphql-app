@@ -1,6 +1,6 @@
 import Auth from '@/src/layouts/Auth'
 
-import Can from '@/src/lib/can'
+import Can from '@/src/libs/can'
 
 import Index from '@/src/components/pages/dashboard'
 import Permission from '@/src/components/pages/permission'

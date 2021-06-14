@@ -1,4 +1,4 @@
-import mutations from '@/src/lib/store/mutations'
+import mutations from '@/src/libs/store/mutations'
 
 import { createContext, useContext, useReducer } from 'react'
 

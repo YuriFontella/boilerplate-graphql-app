@@ -1,5 +1,5 @@
 
-import Loader from '@/src/lib/loader'
+import Loader from '@/src/libs/loader'
 
 import List from '@/src/components/pages/users/list'
 import Section from '@/src/components/pages/users/section'

@@ -1,6 +1,6 @@
 import { GraphQLClient, ClientContext } from 'graphql-hooks'
 
-import Error from '@/src/lib/error'
+import Error from '@/src/libs/error'
 
 import { SubscriptionClient } from 'subscriptions-transport-ws'
 

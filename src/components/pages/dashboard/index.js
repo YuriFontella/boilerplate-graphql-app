@@ -4,7 +4,7 @@ import { GET_COUNTERS } from '@/src/graphql/queries'
 
 import ChartPie from '@/src/components/pages/dashboard/chartpie'
 
-import Loader from '@/src/libs/loader'
+import Loader from '@/src/lib/loader'
 
 const Index = () => {
 

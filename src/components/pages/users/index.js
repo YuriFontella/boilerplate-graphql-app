@@ -1,5 +1,5 @@
 
-import Loader from '@/src/libs/loader'
+import Loader from '@/src/lib/loader'
 
 import List from '@/src/components/pages/users/list'
 import Section from '@/src/components/pages/users/section'
@@ -10,13 +10,12 @@ import { useQuery } from 'graphql-hooks'
 
 const Index = () => {
 
-  const { data, loading } = useQuery(GET_USERS)
+  const { data } = useQuery(GET_USERS)
 
   return (
     <Section>
       <Loader
         source={data?.users}
-        loading={loading}
         component={(item, index) => <List key={index} item={item} />}
         blank={false}
         template={() =>

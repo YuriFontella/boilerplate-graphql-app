@@ -20,6 +20,10 @@ const Auth = ({ children }) => {
 
   graphQLClient.setHeader('x-access-token', session.access_token)
 
+  graphQLClient.onError({
+    result: (result) => console.log(result)
+  })
+
   return (
     <Fragment>
       <Private>{children}</Private>

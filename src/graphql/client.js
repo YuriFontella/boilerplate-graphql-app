@@ -6,13 +6,18 @@ import { SubscriptionClient } from 'subscriptions-transport-ws'
 
 import memCache from 'graphql-hooks-memcache'
 
+const options = {
+  lazy: true,
+  reconnect: true
+}
+
+const websocket = process.browser ? new SubscriptionClient(process.env.WS, options) : null
+
 const graphQLClient = new GraphQLClient({
   url: process.env.GRAPHQL,
   cache: memCache(),
-  subscriptionClient: process.browser ? new SubscriptionClient(process.env.WS, {
-    lazy: true,
-    reconnect: true
-  }) : null,
+  logErrors: process.env.NODE_ENV === 'development',
+  subscriptionClient: websocket,
   onError({ result }) {
     return <Error result={result} />
   }

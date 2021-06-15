@@ -28,3 +28,4 @@ npm run dev
 [Graphql Request](https://github.com/prisma-labs/graphql-request)
 [Hook Form](https://react-hook-form.com/)
 [Tailwindcss](https://tailwindcss.com/)
+[Graphql Hooks](https://github.com/nearform/graphql-hooks/)

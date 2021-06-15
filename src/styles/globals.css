@@ -5,6 +5,6 @@
 @import '~nprogress/nprogress.css';
 
 #nprogress .bar {
-  background: rgba(99, 102, 241) !important;
+  background: rgba(255, 255, 255, 1) !important;
   height: 2px !important;
 }

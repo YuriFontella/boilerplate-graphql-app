@@ -7,8 +7,7 @@ import { LogoutIcon, PuzzleIcon } from '@heroicons/react/solid'
 const navigation = [
   { name: 'Dashboard', href: '/dashboard' },
   { name: 'Usuários', href: '/users' },
-  { name: 'Gatos', href: '/cats' },
-  { name: 'Websocket', href: '/websocket' }
+  { name: 'Gatos', href: '/cats' }
 ]
 
 const Private = ({ children }) => {

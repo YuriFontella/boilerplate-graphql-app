@@ -4,7 +4,6 @@ const mutations = (state, data) => {
 
     case 'error':
       return { ...state, error: data.error }
-      break
   }
 }
 

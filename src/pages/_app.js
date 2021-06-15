@@ -4,7 +4,7 @@ import { Fragment } from 'react'
 
 import { Provider } from 'next-auth/client'
 
-import { ToastContainer } from 'react-toast'
+import { ToastContainer } from '@/src/libs/toast'
 
 import NProgress from 'nprogress'
 
@@ -42,7 +42,7 @@ const App = ({ Component, pageProps }) => {
           </Layout>
         </ClientContext.Provider>
 
-        <ToastContainer position="bottom-center" />
+        <ToastContainer />
       </StoreProvider>
     </Provider>
   )

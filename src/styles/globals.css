@@ -4,11 +4,7 @@
 
 @import '~nprogress/nprogress.css';
 
-#nprogress .peg {
-  box-shadow: none !important;
-}
-
 #nprogress .bar {
-  background: rgba(79, 70, 229, 1) !important;
+  background: rgba(99, 102, 241) !important;
   height: 2px !important;
 }

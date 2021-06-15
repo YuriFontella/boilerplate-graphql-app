@@ -24,7 +24,7 @@ const List = ({ item }) => {
             {item.owner.name}
           </div>
         </div>
-        <div className="flex-1 justify-end text-right text-gray-600 dark:text-gray-200 text-xs">
+        <div className="flex-1 text-right text-gray-600 dark:text-gray-200 text-xs">
           <div>{item.created_at}</div>
         </div>
       </div>

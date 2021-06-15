@@ -1,11 +1,11 @@
-const reducer = (state, data) => {
+const mutations = (state, data) => {
 
   switch (data.type) {
 
     case 'error':
       return { ...state, error: data.error }
-    break
+      break
   }
 }
 
-export default reducer
+export default mutations

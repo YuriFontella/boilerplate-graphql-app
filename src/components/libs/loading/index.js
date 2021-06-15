@@ -1,10 +1,8 @@
-import ReactLoading from 'react-loading'
-
 const Loading = () => {
 
   return (
-    <div className="flex justify-center py-4">
-      <ReactLoading type="spin" width={25} height={25} color="rgba(79, 70, 229)" />
+    <div className="flex justify-center items-center py-4">
+      <span className="rounded-full animate-spin duration-300 w-5 h-5 border-t-2 border-indigo-500"></span>
     </div>
   )
 

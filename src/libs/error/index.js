@@ -1,4 +1,4 @@
-import { toast } from 'react-toast'
+import { toast } from '@/src/libs/toast'
 
 export const Error = (result) => {
 
@@ -11,9 +11,7 @@ export const Error = (result) => {
   }
 
   const error = (error) => {
-    toast.error(error.message, {
-      backgroundColor: "rgba(79, 70, 229)"
-    })
+    toast(error.message)
   }
 
   if (result)

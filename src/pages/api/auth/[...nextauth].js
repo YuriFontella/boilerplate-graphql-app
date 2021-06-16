@@ -22,7 +22,7 @@ const options = {
 
         try {
 
-          const { data } = await graphQLClient.request({ LOGIN, variables })
+          const { data } = await graphQLClient.request({ query: LOGIN, variables })
 
           if (data.auth.user)
             return data.auth
@@ -44,6 +44,7 @@ const options = {
       const isSignIn = (response) ? true : false
 
       if (isSignIn) {
+
         if (account.type === 'credentials') {
 
           token.access_token = response.token

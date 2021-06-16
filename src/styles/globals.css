@@ -4,7 +4,6 @@
 
 @import '~nprogress/nprogress.css';
 
-#nprogress .bar {
-  background: rgba(129, 140, 248) !important;
-  height: 2px !important;
-}
+@import '@/src/styles/toast.css';
+
+@import '@/src/styles/custom.css';

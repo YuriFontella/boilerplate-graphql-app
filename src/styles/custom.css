@@ -1,0 +1,4 @@
+#nprogress .bar {
+  background: rgba(129, 140, 248, 1) !important;
+  height: 2px !important;
+}

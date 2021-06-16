@@ -16,7 +16,7 @@ export default function Example() {
       open={open}
       onClose={setOpen}
     >
-      <div className="flex items-center justify-center min-h-screen text-center sm:block sm:pt-40 md:pt-40">
+      <div className="flex items-center justify-center min-h-screen text-center sm:block sm:pt-40 md:pt-40 p-4 sm:p-0">
         <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
           <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
             <div className="sm:flex sm:items-start">

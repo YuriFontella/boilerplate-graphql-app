@@ -1,7 +1,7 @@
 const Section = ({ children }) => {
 
   return (
-    <section className="flex flex-col p-4 sm:p-0">
+    <section className="flex flex-col px-4 sm:px-0">
       <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
         <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
           <table className="min-w-full divide-y divide-gray-200">

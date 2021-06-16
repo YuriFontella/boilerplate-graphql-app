@@ -1,19 +1,9 @@
 import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
 
-import { graphQLClient } from '@/src/graphql/client'
+import { LOGIN } from '@/src/graphql/queries'
 
-const query = `
-  mutation auth($email: String!, $password: String!) {
-    auth: login(email: $email, password: $password) {
-      token
-      user {
-        name
-        role
-      }
-    }
-  }
-`
+import { graphQLClient } from '@/src/graphql/client'
 
 const options = {
   providers: [
@@ -32,7 +22,7 @@ const options = {
 
         try {
 
-          const { data } = await graphQLClient.request({ query, variables })
+          const { data } = await graphQLClient.request({ LOGIN, variables })
 
           if (data.auth.user)
             return data.auth

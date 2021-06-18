@@ -1,6 +1,7 @@
 import Auth from '@/src/layouts/Auth'
 
 import { SUB_NOTIFICATION } from '@/src/graphql/queries'
+
 import { useState } from 'react'
 
 import { useSubscription } from 'graphql-hooks'

@@ -39,3 +39,15 @@ export const SUB_NOTIFICATION = `
     }
   }
 `
+
+export const LOGIN = `
+  mutation auth($email: String!, $password: String!) {
+    auth: login(email: $email, password: $password) {
+      token
+      user {
+        name
+        role
+      }
+    }
+  }
+`

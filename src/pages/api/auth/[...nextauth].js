@@ -3,19 +3,9 @@ import Providers from 'next-auth/providers'
 
 import { request } from 'graphql-request'
 
-const query = `
-  mutation auth($email: String!, $password: String!) {
-    auth: login(email: $email, password: $password) {
-      token
-      user {
-        name
-        role
-      }
-    }
-  }
-`
+import LOGIN from '@/src/graphql/queries'
 
-const options = {
+export default NextAuth({
   providers: [
     Providers.Auth0({
       clientId: process.env.AUTH0_CLIENT_ID,
@@ -30,7 +20,7 @@ const options = {
 
         try {
 
-          const response = await request(process.env.GRAPHQL, query, { email, password })
+          const response = await request(process.env.GRAPHQL, LOGIN, { email, password })
 
           if (response.auth.user)
             return response.auth
@@ -85,6 +75,4 @@ const options = {
   session: {
     jwt: true
   }
-}
-
-export default (req, res) => NextAuth(req, res, options)
+})

@@ -3,7 +3,7 @@ import Providers from 'next-auth/providers'
 
 import { request } from 'graphql-request'
 
-import LOGIN from '@/src/graphql/queries'
+import { LOGIN } from '@/src/graphql/queries'
 
 export default NextAuth({
   providers: [
@@ -21,6 +21,10 @@ export default NextAuth({
         try {
 
           const response = await request(process.env.GRAPHQL, LOGIN, { email, password })
+
+          console.log(email, password)
+
+          debugger
 
           if (response.auth.user)
             return response.auth

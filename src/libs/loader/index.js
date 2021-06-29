@@ -1,16 +1,16 @@
 import { Fragment } from 'react'
 
 import Loading from '@/src/components/libs/loading'
-import NoResults from '@/src/components/libs/noresults'
+import Empty from '@/src/components/helpers/empty'
 
 const Loader = ({ source, loading, component, blank, template }) => {
 
-  const noresults = typeof blank === 'boolean' ? blank : true
+  const empty = typeof blank === 'boolean' ? blank : true
 
   if (loading)
     return <Loading />
 
-  if (!source || source === undefined)
+  if (source === undefined)
     return null
 
   if (Array.isArray(source)) {
@@ -32,8 +32,8 @@ const Loader = ({ source, loading, component, blank, template }) => {
       return component(source)
   }
 
-  if (noresults)
-    return <NoResults />
+  if (empty)
+    return <Empty />
 
   else {
 

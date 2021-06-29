@@ -21,11 +21,7 @@ const StoreProvider = ({ children }) => {
 
 export const useStore = () => {
 
-  const { state, dispatch } = useContext(Store)
-
-  return {
-    state, dispatch
-  }
+  return useContext(Store)
 }
 
 export default StoreProvider

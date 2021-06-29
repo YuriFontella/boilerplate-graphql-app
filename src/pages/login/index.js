@@ -124,7 +124,7 @@ export async function getServerSideProps(context) {
   if (session) {
     return {
       redirect: {
-        permanent: true,
+        permanent: false,
         destination: '/dashboard'
       }
     }

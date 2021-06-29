@@ -1,6 +1,6 @@
 import { EmojiSadIcon } from '@heroicons/react/solid'
 
-const NoResults = () => {
+const Empty = () => {
 
   return (
     <div className="p-8">
@@ -15,4 +15,4 @@ const NoResults = () => {
   )
 }
 
-export default NoResults
+export default Empty

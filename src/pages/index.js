@@ -1,4 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react'
 
 import { AnnotationIcon, BeakerIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon, MenuIcon, XIcon, PuzzleIcon } from '@heroicons/react/solid'

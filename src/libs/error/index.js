@@ -10,7 +10,10 @@ export const Error = (result) => {
       return message
     }
 
-    else return result.error.httpError.statusText
+    else if (result.error.httpError)
+      return result.error.httpError.statusText
+
+    else return "TypeError: Failed to fetch"
   }
 
   const error = (error) => {

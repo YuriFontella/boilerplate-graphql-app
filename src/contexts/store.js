@@ -2,15 +2,11 @@ import mutations from '@/src/libs/store/mutations'
 
 import { createContext, useContext, useReducer } from 'react'
 
-const initial = {
-  error: {}
-}
-
-export const Store = createContext(initial)
+export const Store = createContext()
 
 const StoreProvider = ({ children }) => {
 
-  const [state, dispatch] = useReducer(mutations, initial)
+  const [state, dispatch] = useReducer(mutations, {})
 
   return (
     <Store.Provider value={{ state, dispatch }}>

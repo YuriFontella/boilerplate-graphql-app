@@ -5,18 +5,14 @@ import { signOut, useSession } from 'next-auth/client'
 import { XCircleIcon, PuzzleIcon } from '@heroicons/react/solid'
 
 import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Disclosure } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
   { name: 'Dashboard', href: '/dashboard' },
   { name: 'Usuários', href: '/users' },
   { name: 'Gatos', href: '/cats' }
 ]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 const Private = ({ children }) => {
 
